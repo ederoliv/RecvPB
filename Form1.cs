@@ -40,64 +40,29 @@ namespace RecvPB
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            //teste
-            tboxFornecedor.Text = "777";
-            tBoxMaterial.Text = "777";
-            tBoxQuantidade.Text = "777";
-            tBoxNumeroLote.Text = "777";
 
-
-            //teste
-
-            RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
-            
-        }
-            
-
-            /*
-            private void btnSalvar_Click(object sender, EventArgs e)
+            if (string.IsNullOrWhiteSpace(tboxFornecedor.Text) ||
+                string.IsNullOrWhiteSpace(tBoxMaterial.Text) ||
+                string.IsNullOrWhiteSpace(dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy")) ||
+                string.IsNullOrWhiteSpace(comboBoxRecebedores.Text) ||
+                string.IsNullOrWhiteSpace(tBoxQuantidade.Text) ||
+                string.IsNullOrWhiteSpace(tBoxNumeroLote.Text))
             {
-                DatabaseConnection connect = new DatabaseConnection();
 
-                using (OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\eder.oliveira\Desktop\RecvPB\RecvPB\371.accdb;Persist Security Info=False;"))
+                Console.WriteLine("Preencha os campos vazios!");
 
-                {
-                    try
-                    {
-                        // Abre a conexão
-                        connection.Open();
+            }
+            else
+            {
+                RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
+            }
 
-                        // Comando SQL para inserir os dados na tabela Recebimento
-                        string query = "INSERT INTO Recebimento (cod_for, cod_mat, dt_recebimento,recebido_por, quantidade, nro_lote) " +
-                                       "VALUES (@cod_for, @cod_mat, @dt_recebimento,@comboBoxRecebedores, @quantidade, @nro_lote)";
 
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
-                        {
-                            // Parâmetros adicionados ao comando SQL, substituindo os placeholders
-                            command.Parameters.AddWithValue("@cod_for", tboxFornecedor.Text);
-                            command.Parameters.AddWithValue("@cod_mat", tBoxMaterial.Text);
-                            command.Parameters.AddWithValue("@dt_recebimento", dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"));
-                            command.Parameters.AddWithValue("recebido_por", comboBoxRecebedores.Text);
-                            command.Parameters.AddWithValue("@quantidade", tBoxQuantidade.Text);
-                            command.Parameters.AddWithValue("@nro_lote", tBoxNumeroLote.Text);
 
-                            // Executa o comando para inserir os dados
-                            command.ExecuteNonQuery();
+        }
 
-                            // Exibe uma mensagem de sucesso
-                            MessageBox.Show("Recebimento inserido com sucesso!");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Exibe uma mensagem de erro, se necessário
-                        MessageBox.Show("Erro ao inserir recebimento: " + ex.Message);
-                    }
-                }
 
-            } */
-
-            private void btnSobre_Click(object sender, EventArgs e)
+        private void btnSobre_Click(object sender, EventArgs e)
         {
             // URL para onde deseja redirecionar
             string url = "https://ederoliv.github.io";
@@ -111,6 +76,11 @@ namespace RecvPB
             {
                 MessageBox.Show("Erro ao abrir o site: " + ex.Message);
             }
+        }
+
+        private void btnConsultarRecebimentos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
