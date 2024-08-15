@@ -1,5 +1,6 @@
 using RecvPB.Repository;
 using System.Data;
+using System.Data.Common;
 using System.Data.OleDb;
 
 namespace RecvPB
@@ -14,27 +15,10 @@ namespace RecvPB
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            DatabaseConnection conn = new DatabaseConnection();
-
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
-            {
-                try
-                {
-                    connection.Open();
-                    string query = "SELECT nome FROM recebedor";
-                    OleDbCommand command = new OleDbCommand(query, connection);
-                    OleDbDataAdapter adapter = new OleDbDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    comboBoxRecebedores.DisplayMember = "nome";
-                    comboBoxRecebedores.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao carregar recebedores: " + ex.Message);
-                }
-            }
+            
+            comboBoxRecebedores.DisplayMember = "nome";
+            comboBoxRecebedores.DataSource = RecebedoresRepository.ConsultaRecebedores();
+               
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
