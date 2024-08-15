@@ -4,10 +4,10 @@ using System.Data.OleDb;
 
 namespace RecvPB
 {
-    public partial class Form1 : Form
+    public partial class FormInicial : Form
     {
 
-        public Form1()
+        public FormInicial()
         {
             InitializeComponent();
         }
@@ -57,30 +57,25 @@ namespace RecvPB
                 RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
             }
 
-
-
         }
-
-
-        private void btnSobre_Click(object sender, EventArgs e)
-        {
-            // URL para onde deseja redirecionar
-            string url = "https://ederoliv.github.io";
-
-            // Abre o navegador com o URL
-            try
-            {
-                System.Diagnostics.Process.Start(url);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir o site: " + ex.Message);
-            }
-        }
-
         private void btnConsultarRecebimentos_Click(object sender, EventArgs e)
         {
+            // Abrir formulário de consulta de recebimento
+            FormConsultaRecebimento formConsultaRecebimento = new FormConsultaRecebimento();
+            formConsultaRecebimento.ShowDialog();
 
+        }
+
+        private void btnCadastraRecebedor_Click(object sender, EventArgs e)
+        {
+            FormCadastraRecebedor formCadastraRecebedor = new FormCadastraRecebedor();
+            formCadastraRecebedor.ShowDialog();
+        }
+
+        private void btnCadastraFornecedor_Click_1(object sender, EventArgs e)
+        {
+            FormCadastraFornecedor formCadastraFornecedor = new FormCadastraFornecedor();
+            formCadastraFornecedor.ShowDialog();
         }
     }
 }
