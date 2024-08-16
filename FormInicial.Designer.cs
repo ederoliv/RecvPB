@@ -54,7 +54,7 @@ namespace RecvPB
             // 
             comboBoxRecebedores.Font = new Font("SAPGUI-Icons", 14.25F);
             comboBoxRecebedores.FormattingEnabled = true;
-            comboBoxRecebedores.Location = new Point(588, 223);
+            comboBoxRecebedores.Location = new Point(591, 152);
             comboBoxRecebedores.Name = "comboBoxRecebedores";
             comboBoxRecebedores.Size = new Size(184, 29);
             comboBoxRecebedores.TabIndex = 0;
@@ -63,7 +63,7 @@ namespace RecvPB
             // 
             tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
             tboxFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxFornecedor.Location = new Point(133, 222);
+            tboxFornecedor.Location = new Point(136, 151);
             tboxFornecedor.Name = "tboxFornecedor";
             tboxFornecedor.Size = new Size(153, 30);
             tboxFornecedor.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace RecvPB
             // 
             tBoxMaterial.BorderStyle = BorderStyle.FixedSingle;
             tBoxMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxMaterial.Location = new Point(133, 296);
+            tBoxMaterial.Location = new Point(136, 225);
             tBoxMaterial.Name = "tBoxMaterial";
             tBoxMaterial.Size = new Size(153, 30);
             tBoxMaterial.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace RecvPB
             // 
             tBoxQuantidade.BorderStyle = BorderStyle.FixedSingle;
             tBoxQuantidade.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxQuantidade.Location = new Point(353, 296);
+            tBoxQuantidade.Location = new Point(356, 225);
             tBoxQuantidade.Name = "tBoxQuantidade";
             tBoxQuantidade.Size = new Size(153, 30);
             tBoxQuantidade.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace RecvPB
             // 
             tBoxNumeroLote.BorderStyle = BorderStyle.FixedSingle;
             tBoxNumeroLote.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxNumeroLote.Location = new Point(588, 296);
+            tBoxNumeroLote.Location = new Point(591, 225);
             tBoxNumeroLote.Name = "tBoxNumeroLote";
             tBoxNumeroLote.Size = new Size(153, 30);
             tBoxNumeroLote.TabIndex = 4;
@@ -101,7 +101,7 @@ namespace RecvPB
             dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
             dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
             dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(353, 223);
+            dtPickerDataRecebimento.Location = new Point(356, 152);
             dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
             dtPickerDataRecebimento.Size = new Size(131, 30);
             dtPickerDataRecebimento.TabIndex = 5;
@@ -110,7 +110,7 @@ namespace RecvPB
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(136, 199);
+            label1.Location = new Point(139, 128);
             label1.Name = "label1";
             label1.Size = new Size(87, 21);
             label1.TabIndex = 6;
@@ -120,7 +120,7 @@ namespace RecvPB
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(356, 200);
+            label2.Location = new Point(359, 129);
             label2.Name = "label2";
             label2.Size = new Size(131, 21);
             label2.TabIndex = 7;
@@ -130,7 +130,7 @@ namespace RecvPB
             // 
             label3.AutoSize = true;
             label3.Font = new Font("SAPGUI-Icons", 14.25F);
-            label3.Location = new Point(591, 200);
+            label3.Location = new Point(594, 129);
             label3.Name = "label3";
             label3.Size = new Size(100, 21);
             label3.TabIndex = 8;
@@ -140,7 +140,7 @@ namespace RecvPB
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SAPGUI-Icons", 14.25F);
-            label4.Location = new Point(136, 273);
+            label4.Location = new Point(139, 202);
             label4.Name = "label4";
             label4.Size = new Size(64, 21);
             label4.TabIndex = 9;
@@ -150,7 +150,7 @@ namespace RecvPB
             // 
             label5.AutoSize = true;
             label5.Font = new Font("SAPGUI-Icons", 14.25F);
-            label5.Location = new Point(356, 273);
+            label5.Location = new Point(359, 202);
             label5.Name = "label5";
             label5.Size = new Size(88, 21);
             label5.TabIndex = 10;
@@ -160,7 +160,7 @@ namespace RecvPB
             // 
             label6.AutoSize = true;
             label6.Font = new Font("SAPGUI-Icons", 14.25F);
-            label6.Location = new Point(591, 273);
+            label6.Location = new Point(594, 202);
             label6.Name = "label6";
             label6.Size = new Size(96, 21);
             label6.TabIndex = 11;
@@ -176,7 +176,7 @@ namespace RecvPB
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(133, 354);
+            btnSalvar.Location = new Point(136, 283);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -192,8 +192,8 @@ namespace RecvPB
             label7.AutoSize = true;
             label7.BackColor = SystemColors.ButtonHighlight;
             label7.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.DodgerBlue;
-            label7.Location = new Point(185, 71);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(188, 9);
             label7.Name = "label7";
             label7.Size = new Size(556, 50);
             label7.TabIndex = 14;
@@ -287,7 +287,10 @@ namespace RecvPB
             Controls.Add(comboBoxRecebedores);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(941, 641);
+            MinimumSize = new Size(941, 641);
             Name = "FormInicial";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RecvPB - Recebimento";
             Load += Form1_Load;
             ResumeLayout(false);

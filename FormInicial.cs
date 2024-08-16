@@ -14,16 +14,13 @@ namespace RecvPB
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            
+        {            
             comboBoxRecebedores.DisplayMember = "nome";
-            comboBoxRecebedores.DataSource = RecebedoresRepository.ConsultaRecebedores();
-               
+            comboBoxRecebedores.DataSource = RecebedoresRepository.ConsultaRecebedores();               
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
 
             if (string.IsNullOrWhiteSpace(tboxFornecedor.Text) ||
                 string.IsNullOrWhiteSpace(tBoxMaterial.Text) ||
@@ -32,22 +29,20 @@ namespace RecvPB
                 string.IsNullOrWhiteSpace(tBoxQuantidade.Text) ||
                 string.IsNullOrWhiteSpace(tBoxNumeroLote.Text))
             {
-
-                Console.WriteLine("Preencha os campos vazios!");
-
+                MessageBox.Show("Preencha os campos vazios!");
             }
             else
             {
                 RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
+
+                LimpaCamposFormInicial();
             }
 
         }
         private void btnConsultarRecebimentos_Click(object sender, EventArgs e)
         {
-            // Abrir formulário de consulta de recebimento
             FormConsultaRecebimento formConsultaRecebimento = new FormConsultaRecebimento();
             formConsultaRecebimento.ShowDialog();
-
         }
 
         private void btnCadastraRecebedor_Click(object sender, EventArgs e)
@@ -60,6 +55,15 @@ namespace RecvPB
         {
             FormCadastraFornecedor formCadastraFornecedor = new FormCadastraFornecedor();
             formCadastraFornecedor.ShowDialog();
+        }
+
+        private void LimpaCamposFormInicial()
+        {
+            tboxFornecedor.Text = string.Empty;
+            tBoxMaterial.Text = string.Empty;
+            tBoxQuantidade.Text = string.Empty;
+            tBoxNumeroLote.Text = string.Empty;
+
         }
     }
 }
