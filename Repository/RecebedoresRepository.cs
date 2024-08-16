@@ -11,10 +11,10 @@ namespace RecvPB.Repository
 {
     internal static class RecebedoresRepository
     {
-        public static DataTable ConsultaRecebedores()
+        public static DataTable BuscaTodosRecebedoresNome()
         {
 
-            DatabaseConnection conn = new DatabaseConnection();
+            //DatabaseConnection conn = new DatabaseConnection();
 
             using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
             {
@@ -39,7 +39,32 @@ namespace RecvPB.Repository
 
         }
 
-        public static Boolean CadastraRecebedor(string nome)
+        public static DataTable BuscaTodosRecebedoresNomeId()
+        {
+
+            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT Código, nome FROM recebedor";
+                    OleDbCommand command = new OleDbCommand(query, connection);
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    return dataTable;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar recebedores: " + ex.Message);
+                    return new DataTable();
+                }
+            }
+        }
+
+        public static Boolean InsereRecebedor(string nome)
         {
             //DatabaseConnection conn = new DatabaseConnection();
 

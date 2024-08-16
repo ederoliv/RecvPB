@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastraFornecedor));
             btnSalvar = new Button();
-            tboxFornecedor = new TextBox();
-            textBox1 = new TextBox();
+            tboxCodFornecedor = new TextBox();
+            tboxNomeFornecedor = new TextBox();
             label7 = new Label();
             label1 = new Label();
             label2 = new Label();
             btnVoltar = new Button();
+            dgvFornecedores = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvFornecedores).BeginInit();
             SuspendLayout();
             // 
             // btnSalvar
@@ -48,7 +50,7 @@
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(177, 262);
+            btnSalvar.Location = new Point(177, 179);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -57,24 +59,25 @@
             btnSalvar.Text = "Cadastrar fornecedor";
             btnSalvar.TextAlign = ContentAlignment.TopCenter;
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
-            // tboxFornecedor
+            // tboxCodFornecedor
             // 
-            tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxFornecedor.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tboxFornecedor.Location = new Point(181, 207);
-            tboxFornecedor.Name = "tboxFornecedor";
-            tboxFornecedor.Size = new Size(158, 35);
-            tboxFornecedor.TabIndex = 15;
+            tboxCodFornecedor.BorderStyle = BorderStyle.FixedSingle;
+            tboxCodFornecedor.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tboxCodFornecedor.Location = new Point(181, 124);
+            tboxCodFornecedor.Name = "tboxCodFornecedor";
+            tboxCodFornecedor.Size = new Size(158, 35);
+            tboxCodFornecedor.TabIndex = 15;
             // 
-            // textBox1
+            // tboxNomeFornecedor
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(368, 207);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(340, 35);
-            textBox1.TabIndex = 16;
+            tboxNomeFornecedor.BorderStyle = BorderStyle.FixedSingle;
+            tboxNomeFornecedor.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tboxNomeFornecedor.Location = new Point(368, 124);
+            tboxNomeFornecedor.Name = "tboxNomeFornecedor";
+            tboxNomeFornecedor.Size = new Size(340, 35);
+            tboxNomeFornecedor.TabIndex = 16;
             // 
             // label7
             // 
@@ -92,7 +95,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(368, 184);
+            label1.Location = new Point(368, 101);
             label1.Name = "label1";
             label1.Size = new Size(235, 21);
             label1.TabIndex = 18;
@@ -102,7 +105,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(184, 184);
+            label2.Location = new Point(184, 101);
             label2.Name = "label2";
             label2.Size = new Size(155, 21);
             label2.TabIndex = 19;
@@ -118,7 +121,7 @@
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(177, 318);
+            btnVoltar.Location = new Point(177, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
@@ -129,24 +132,38 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
+            // dgvFornecedores
+            // 
+            dgvFornecedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFornecedores.BackgroundColor = Color.White;
+            dgvFornecedores.BorderStyle = BorderStyle.Fixed3D;
+            dgvFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFornecedores.Location = new Point(177, 238);
+            dgvFornecedores.Name = "dgvFornecedores";
+            dgvFornecedores.Size = new Size(527, 263);
+            dgvFornecedores.TabIndex = 29;
+            // 
             // FormCadastraFornecedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(900, 575);
+            Controls.Add(dgvFornecedores);
             Controls.Add(btnVoltar);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label7);
-            Controls.Add(textBox1);
-            Controls.Add(tboxFornecedor);
+            Controls.Add(tboxNomeFornecedor);
+            Controls.Add(tboxCodFornecedor);
             Controls.Add(btnSalvar);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCadastraFornecedor";
             StartPosition = FormStartPosition.CenterParent;
             Text = "RecvPB - Cadastrar Fornecedor";
+            Load += FormCadastraFornecedor_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvFornecedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -154,11 +171,12 @@
         #endregion
 
         private Button btnSalvar;
-        private TextBox tboxFornecedor;
-        private TextBox textBox1;
+        private TextBox tboxCodFornecedor;
+        private TextBox tboxNomeFornecedor;
         private Label label7;
         private Label label1;
         private Label label2;
         private Button btnVoltar;
+        private DataGridView dgvFornecedores;
     }
 }

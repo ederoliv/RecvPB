@@ -16,7 +16,7 @@ namespace RecvPB
         private void Form1_Load(object sender, EventArgs e)
         {            
             comboBoxRecebedores.DisplayMember = "nome";
-            comboBoxRecebedores.DataSource = RecebedoresRepository.ConsultaRecebedores();               
+            comboBoxRecebedores.DataSource = RecebedoresRepository.BuscaTodosRecebedoresNome();               
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)

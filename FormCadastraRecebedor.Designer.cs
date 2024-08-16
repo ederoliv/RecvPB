@@ -34,6 +34,8 @@
             label7 = new Label();
             txtBoxNomeRecebedor = new TextBox();
             btnSalvar = new Button();
+            dgvRecebedores = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvRecebedores).BeginInit();
             SuspendLayout();
             // 
             // btnVoltar
@@ -46,7 +48,7 @@
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(190, 347);
+            btnVoltar.Location = new Point(193, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
@@ -61,7 +63,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(193, 211);
+            label1.Location = new Point(196, 109);
             label1.Name = "label1";
             label1.Size = new Size(140, 21);
             label1.TabIndex = 25;
@@ -83,9 +85,9 @@
             // 
             txtBoxNomeRecebedor.BorderStyle = BorderStyle.FixedSingle;
             txtBoxNomeRecebedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxNomeRecebedor.Location = new Point(190, 235);
+            txtBoxNomeRecebedor.Location = new Point(193, 133);
             txtBoxNomeRecebedor.Name = "txtBoxNomeRecebedor";
-            txtBoxNomeRecebedor.PlaceholderText = "Insira a nome do Funcionário que irá receber os produtos...";
+            txtBoxNomeRecebedor.PlaceholderText = "  Insira o nome do Funcionário que irá receber os produtos...";
             txtBoxNomeRecebedor.Size = new Size(527, 32);
             txtBoxNomeRecebedor.TabIndex = 23;
             // 
@@ -99,7 +101,7 @@
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(190, 291);
+            btnSalvar.Location = new Point(193, 186);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -110,12 +112,24 @@
             btnSalvar.UseVisualStyleBackColor = false;
             btnSalvar.Click += btnSalvar_Click;
             // 
+            // dgvRecebedores
+            // 
+            dgvRecebedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecebedores.BackgroundColor = Color.White;
+            dgvRecebedores.BorderStyle = BorderStyle.Fixed3D;
+            dgvRecebedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecebedores.Location = new Point(193, 244);
+            dgvRecebedores.Name = "dgvRecebedores";
+            dgvRecebedores.Size = new Size(527, 263);
+            dgvRecebedores.TabIndex = 28;
+            // 
             // FormCadastraRecebedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(900, 575);
+            Controls.Add(dgvRecebedores);
             Controls.Add(btnVoltar);
             Controls.Add(label1);
             Controls.Add(label7);
@@ -126,6 +140,8 @@
             Name = "FormCadastraRecebedor";
             StartPosition = FormStartPosition.CenterParent;
             Text = "RecvPB - Cadastrar Recebedor";
+            Load += FormCadastraRecebedor_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvRecebedores).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,5 +153,6 @@
         private Label label7;
         private TextBox txtBoxNomeRecebedor;
         private Button btnSalvar;
+        private DataGridView dgvRecebedores;
     }
 }
