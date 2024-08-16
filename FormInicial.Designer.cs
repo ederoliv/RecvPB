@@ -48,13 +48,17 @@ namespace RecvPB
             btnConsultarRecebimentos = new Button();
             btnCadastraRecebedor = new Button();
             btnCadastraFornecedor = new Button();
+            panel1 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // comboBoxRecebedores
             // 
             comboBoxRecebedores.Font = new Font("SAPGUI-Icons", 14.25F);
             comboBoxRecebedores.FormattingEnabled = true;
-            comboBoxRecebedores.Location = new Point(591, 152);
+            comboBoxRecebedores.Location = new Point(594, 89);
             comboBoxRecebedores.Name = "comboBoxRecebedores";
             comboBoxRecebedores.Size = new Size(184, 29);
             comboBoxRecebedores.TabIndex = 0;
@@ -63,7 +67,7 @@ namespace RecvPB
             // 
             tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
             tboxFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxFornecedor.Location = new Point(136, 151);
+            tboxFornecedor.Location = new Point(139, 88);
             tboxFornecedor.Name = "tboxFornecedor";
             tboxFornecedor.Size = new Size(153, 30);
             tboxFornecedor.TabIndex = 1;
@@ -72,7 +76,7 @@ namespace RecvPB
             // 
             tBoxMaterial.BorderStyle = BorderStyle.FixedSingle;
             tBoxMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxMaterial.Location = new Point(136, 225);
+            tBoxMaterial.Location = new Point(139, 143);
             tBoxMaterial.Name = "tBoxMaterial";
             tBoxMaterial.Size = new Size(153, 30);
             tBoxMaterial.TabIndex = 2;
@@ -81,7 +85,7 @@ namespace RecvPB
             // 
             tBoxQuantidade.BorderStyle = BorderStyle.FixedSingle;
             tBoxQuantidade.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxQuantidade.Location = new Point(356, 225);
+            tBoxQuantidade.Location = new Point(359, 144);
             tBoxQuantidade.Name = "tBoxQuantidade";
             tBoxQuantidade.Size = new Size(153, 30);
             tBoxQuantidade.TabIndex = 3;
@@ -90,7 +94,7 @@ namespace RecvPB
             // 
             tBoxNumeroLote.BorderStyle = BorderStyle.FixedSingle;
             tBoxNumeroLote.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxNumeroLote.Location = new Point(591, 225);
+            tBoxNumeroLote.Location = new Point(594, 143);
             tBoxNumeroLote.Name = "tBoxNumeroLote";
             tBoxNumeroLote.Size = new Size(153, 30);
             tBoxNumeroLote.TabIndex = 4;
@@ -101,7 +105,7 @@ namespace RecvPB
             dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
             dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
             dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(356, 152);
+            dtPickerDataRecebimento.Location = new Point(359, 89);
             dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
             dtPickerDataRecebimento.Size = new Size(131, 30);
             dtPickerDataRecebimento.TabIndex = 5;
@@ -110,7 +114,7 @@ namespace RecvPB
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(139, 128);
+            label1.Location = new Point(142, 65);
             label1.Name = "label1";
             label1.Size = new Size(87, 21);
             label1.TabIndex = 6;
@@ -120,7 +124,7 @@ namespace RecvPB
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(359, 129);
+            label2.Location = new Point(362, 66);
             label2.Name = "label2";
             label2.Size = new Size(131, 21);
             label2.TabIndex = 7;
@@ -130,7 +134,7 @@ namespace RecvPB
             // 
             label3.AutoSize = true;
             label3.Font = new Font("SAPGUI-Icons", 14.25F);
-            label3.Location = new Point(594, 129);
+            label3.Location = new Point(597, 66);
             label3.Name = "label3";
             label3.Size = new Size(100, 21);
             label3.TabIndex = 8;
@@ -140,7 +144,7 @@ namespace RecvPB
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SAPGUI-Icons", 14.25F);
-            label4.Location = new Point(139, 202);
+            label4.Location = new Point(142, 120);
             label4.Name = "label4";
             label4.Size = new Size(64, 21);
             label4.TabIndex = 9;
@@ -150,7 +154,7 @@ namespace RecvPB
             // 
             label5.AutoSize = true;
             label5.Font = new Font("SAPGUI-Icons", 14.25F);
-            label5.Location = new Point(359, 202);
+            label5.Location = new Point(362, 121);
             label5.Name = "label5";
             label5.Size = new Size(88, 21);
             label5.TabIndex = 10;
@@ -160,7 +164,7 @@ namespace RecvPB
             // 
             label6.AutoSize = true;
             label6.Font = new Font("SAPGUI-Icons", 14.25F);
-            label6.Location = new Point(594, 202);
+            label6.Location = new Point(597, 120);
             label6.Name = "label6";
             label6.Size = new Size(96, 21);
             label6.TabIndex = 11;
@@ -176,7 +180,7 @@ namespace RecvPB
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(136, 283);
+            btnSalvar.Location = new Point(139, 182);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -190,33 +194,36 @@ namespace RecvPB
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = SystemColors.ButtonHighlight;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(188, 9);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(165, 2);
             label7.Name = "label7";
             label7.Size = new Size(556, 50);
             label7.TabIndex = 14;
             label7.Text = "Registro de entrada de produtos";
+            label7.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnConsultarRecebimentos
             // 
             btnConsultarRecebimentos.Anchor = AnchorStyles.Top;
             btnConsultarRecebimentos.BackColor = Color.Goldenrod;
+            btnConsultarRecebimentos.BackgroundImage = Properties.Resources.procurar1;
             btnConsultarRecebimentos.BackgroundImageLayout = ImageLayout.Center;
             btnConsultarRecebimentos.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnConsultarRecebimentos.FlatAppearance.BorderSize = 0;
             btnConsultarRecebimentos.FlatStyle = FlatStyle.Flat;
             btnConsultarRecebimentos.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConsultarRecebimentos.ForeColor = SystemColors.ButtonHighlight;
-            btnConsultarRecebimentos.Location = new Point(133, 500);
+            btnConsultarRecebimentos.ForeColor = Color.White;
+            btnConsultarRecebimentos.ImageAlign = ContentAlignment.TopCenter;
+            btnConsultarRecebimentos.Location = new Point(139, 469);
             btnConsultarRecebimentos.Name = "btnConsultarRecebimentos";
             btnConsultarRecebimentos.Padding = new Padding(0, 0, 0, 4);
             btnConsultarRecebimentos.RightToLeft = RightToLeft.No;
-            btnConsultarRecebimentos.Size = new Size(191, 36);
+            btnConsultarRecebimentos.Size = new Size(191, 121);
             btnConsultarRecebimentos.TabIndex = 15;
             btnConsultarRecebimentos.Text = "Consultar recebimentos";
-            btnConsultarRecebimentos.TextAlign = ContentAlignment.TopCenter;
+            btnConsultarRecebimentos.TextAlign = ContentAlignment.BottomCenter;
             btnConsultarRecebimentos.UseVisualStyleBackColor = false;
             btnConsultarRecebimentos.Click += btnConsultarRecebimentos_Click;
             // 
@@ -224,20 +231,21 @@ namespace RecvPB
             // 
             btnCadastraRecebedor.Anchor = AnchorStyles.Top;
             btnCadastraRecebedor.BackColor = Color.DodgerBlue;
+            btnCadastraRecebedor.BackgroundImage = (Image)resources.GetObject("btnCadastraRecebedor.BackgroundImage");
             btnCadastraRecebedor.BackgroundImageLayout = ImageLayout.Center;
             btnCadastraRecebedor.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnCadastraRecebedor.FlatAppearance.BorderSize = 0;
             btnCadastraRecebedor.FlatStyle = FlatStyle.Flat;
             btnCadastraRecebedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCadastraRecebedor.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastraRecebedor.Location = new Point(581, 500);
+            btnCadastraRecebedor.Location = new Point(587, 469);
             btnCadastraRecebedor.Name = "btnCadastraRecebedor";
-            btnCadastraRecebedor.Padding = new Padding(0, 0, 0, 4);
+            btnCadastraRecebedor.Padding = new Padding(0, 0, 0, 3);
             btnCadastraRecebedor.RightToLeft = RightToLeft.No;
-            btnCadastraRecebedor.Size = new Size(191, 36);
+            btnCadastraRecebedor.Size = new Size(191, 121);
             btnCadastraRecebedor.TabIndex = 18;
             btnCadastraRecebedor.Text = "Cadastrar Recebedor";
-            btnCadastraRecebedor.TextAlign = ContentAlignment.TopCenter;
+            btnCadastraRecebedor.TextAlign = ContentAlignment.BottomCenter;
             btnCadastraRecebedor.UseVisualStyleBackColor = false;
             btnCadastraRecebedor.Click += btnCadastraRecebedor_Click;
             // 
@@ -245,22 +253,41 @@ namespace RecvPB
             // 
             btnCadastraFornecedor.Anchor = AnchorStyles.Top;
             btnCadastraFornecedor.BackColor = Color.MediumSlateBlue;
+            btnCadastraFornecedor.BackgroundImage = (Image)resources.GetObject("btnCadastraFornecedor.BackgroundImage");
             btnCadastraFornecedor.BackgroundImageLayout = ImageLayout.Center;
             btnCadastraFornecedor.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnCadastraFornecedor.FlatAppearance.BorderSize = 0;
             btnCadastraFornecedor.FlatStyle = FlatStyle.Flat;
             btnCadastraFornecedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCadastraFornecedor.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastraFornecedor.Location = new Point(356, 500);
+            btnCadastraFornecedor.Location = new Point(362, 469);
             btnCadastraFornecedor.Name = "btnCadastraFornecedor";
             btnCadastraFornecedor.Padding = new Padding(0, 0, 0, 4);
             btnCadastraFornecedor.RightToLeft = RightToLeft.No;
-            btnCadastraFornecedor.Size = new Size(191, 36);
+            btnCadastraFornecedor.Size = new Size(191, 121);
             btnCadastraFornecedor.TabIndex = 19;
             btnCadastraFornecedor.Text = "Cadastrar Fornecedor";
-            btnCadastraFornecedor.TextAlign = ContentAlignment.TopCenter;
+            btnCadastraFornecedor.TextAlign = ContentAlignment.BottomCenter;
             btnCadastraFornecedor.UseVisualStyleBackColor = false;
             btnCadastraFornecedor.Click += btnCadastraFornecedor_Click_1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightSeaGreen;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(21, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(880, 56);
+            panel1.TabIndex = 25;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(139, 228);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(639, 229);
+            dataGridView1.TabIndex = 26;
             // 
             // FormInicial
             // 
@@ -268,10 +295,11 @@ namespace RecvPB
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(925, 602);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             Controls.Add(btnCadastraFornecedor);
             Controls.Add(btnCadastraRecebedor);
             Controls.Add(btnConsultarRecebimentos);
-            Controls.Add(label7);
             Controls.Add(btnSalvar);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -293,6 +321,9 @@ namespace RecvPB
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RecvPB - Recebimento";
             Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -316,5 +347,7 @@ namespace RecvPB
         private Button btnConsultarRecebimentos;
         private Button btnCadastraRecebedor;
         private Button btnCadastraFornecedor;
+        private Panel panel1;
+        private DataGridView dataGridView1;
     }
 }

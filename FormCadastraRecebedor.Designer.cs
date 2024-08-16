@@ -35,7 +35,9 @@
             txtBoxNomeRecebedor = new TextBox();
             btnSalvar = new Button();
             dgvRecebedores = new DataGridView();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvRecebedores).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnVoltar
@@ -48,11 +50,11 @@
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(193, 527);
+            btnVoltar.Location = new Point(32, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
-            btnVoltar.Size = new Size(527, 36);
+            btnVoltar.Size = new Size(860, 36);
             btnVoltar.TabIndex = 27;
             btnVoltar.Text = "Voltar";
             btnVoltar.TextAlign = ContentAlignment.TopCenter;
@@ -63,7 +65,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(196, 109);
+            label1.Location = new Point(195, 85);
             label1.Name = "label1";
             label1.Size = new Size(140, 21);
             label1.TabIndex = 25;
@@ -72,10 +74,10 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = SystemColors.ButtonHighlight;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(221, 9);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(224, 3);
             label7.Name = "label7";
             label7.Size = new Size(448, 50);
             label7.TabIndex = 24;
@@ -85,9 +87,9 @@
             // 
             txtBoxNomeRecebedor.BorderStyle = BorderStyle.FixedSingle;
             txtBoxNomeRecebedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxNomeRecebedor.Location = new Point(193, 133);
+            txtBoxNomeRecebedor.Location = new Point(192, 109);
             txtBoxNomeRecebedor.Name = "txtBoxNomeRecebedor";
-            txtBoxNomeRecebedor.PlaceholderText = "  Insira o nome do Funcionário que irá receber os produtos...";
+            txtBoxNomeRecebedor.PlaceholderText = "  Insira o nome do funcionário que irá receber os produtos...";
             txtBoxNomeRecebedor.Size = new Size(527, 32);
             txtBoxNomeRecebedor.TabIndex = 23;
             // 
@@ -101,7 +103,7 @@
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(193, 186);
+            btnSalvar.Location = new Point(192, 159);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -118,21 +120,30 @@
             dgvRecebedores.BackgroundColor = Color.White;
             dgvRecebedores.BorderStyle = BorderStyle.Fixed3D;
             dgvRecebedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRecebedores.Location = new Point(193, 244);
+            dgvRecebedores.Location = new Point(195, 214);
             dgvRecebedores.Name = "dgvRecebedores";
-            dgvRecebedores.Size = new Size(527, 263);
+            dgvRecebedores.Size = new Size(527, 296);
             dgvRecebedores.TabIndex = 28;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DodgerBlue;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(21, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(880, 56);
+            panel1.TabIndex = 29;
             // 
             // FormCadastraRecebedor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(900, 575);
+            ClientSize = new Size(925, 575);
+            Controls.Add(panel1);
             Controls.Add(dgvRecebedores);
             Controls.Add(btnVoltar);
             Controls.Add(label1);
-            Controls.Add(label7);
             Controls.Add(txtBoxNomeRecebedor);
             Controls.Add(btnSalvar);
             FormBorderStyle = FormBorderStyle.None;
@@ -142,6 +153,8 @@
             Text = "RecvPB - Cadastrar Recebedor";
             Load += FormCadastraRecebedor_Load;
             ((System.ComponentModel.ISupportInitialize)dgvRecebedores).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -154,5 +167,6 @@
         private TextBox txtBoxNomeRecebedor;
         private Button btnSalvar;
         private DataGridView dgvRecebedores;
+        private Panel panel1;
     }
 }

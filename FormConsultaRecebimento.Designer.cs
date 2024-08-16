@@ -39,7 +39,9 @@
             dtPickerDataRecebimento = new DateTimePicker();
             label1 = new Label();
             label3 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnSalvar
@@ -53,7 +55,7 @@
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
             btnSalvar.ImeMode = ImeMode.NoControl;
-            btnSalvar.Location = new Point(633, 112);
+            btnSalvar.Location = new Point(644, 107);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -68,16 +70,16 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 161);
+            dataGridView1.Location = new Point(32, 163);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(861, 321);
+            dataGridView1.Size = new Size(861, 358);
             dataGridView1.TabIndex = 15;
             // 
             // tboxFornecedor
             // 
             tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
             tboxFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxFornecedor.Location = new Point(141, 114);
+            tboxFornecedor.Location = new Point(132, 109);
             tboxFornecedor.Name = "tboxFornecedor";
             tboxFornecedor.Size = new Size(153, 30);
             tboxFornecedor.TabIndex = 16;
@@ -85,11 +87,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = SystemColors.ButtonHighlight;
+            label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 27.75F);
-            label7.ForeColor = Color.Black;
+            label7.ForeColor = Color.White;
             label7.ImeMode = ImeMode.NoControl;
-            label7.Location = new Point(235, 9);
+            label7.Location = new Point(234, 3);
             label7.Name = "label7";
             label7.Size = new Size(419, 50);
             label7.TabIndex = 17;
@@ -106,7 +108,7 @@
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
             btnVoltar.ImeMode = ImeMode.NoControl;
-            btnVoltar.Location = new Point(12, 488);
+            btnVoltar.Location = new Point(32, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
@@ -121,7 +123,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("SAPGUI-Icons", 14.25F);
-            textBox1.Location = new Point(320, 114);
+            textBox1.Location = new Point(311, 109);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(153, 30);
             textBox1.TabIndex = 19;
@@ -130,7 +132,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(498, 91);
+            label2.Location = new Point(489, 86);
             label2.Name = "label2";
             label2.Size = new Size(131, 21);
             label2.TabIndex = 21;
@@ -142,7 +144,7 @@
             dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
             dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
             dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(498, 114);
+            dtPickerDataRecebimento.Location = new Point(489, 109);
             dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
             dtPickerDataRecebimento.Size = new Size(131, 30);
             dtPickerDataRecebimento.TabIndex = 20;
@@ -151,7 +153,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(144, 91);
+            label1.Location = new Point(135, 86);
             label1.Name = "label1";
             label1.Size = new Size(135, 21);
             label1.TabIndex = 22;
@@ -161,25 +163,34 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("SAPGUI-Icons", 14.25F);
-            label3.Location = new Point(323, 91);
+            label3.Location = new Point(314, 86);
             label3.Name = "label3";
             label3.Size = new Size(112, 21);
             label3.TabIndex = 23;
             label3.Text = "Código Material:";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Goldenrod;
+            panel1.Controls.Add(label7);
+            panel1.Location = new Point(21, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(880, 56);
+            panel1.TabIndex = 24;
             // 
             // FormConsultaRecebimento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(884, 536);
+            ClientSize = new Size(925, 575);
+            Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(dtPickerDataRecebimento);
             Controls.Add(textBox1);
             Controls.Add(btnVoltar);
-            Controls.Add(label7);
             Controls.Add(tboxFornecedor);
             Controls.Add(dataGridView1);
             Controls.Add(btnSalvar);
@@ -189,6 +200,8 @@
             StartPosition = FormStartPosition.CenterParent;
             Text = "RecvPB - Consultar Recebimentos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,5 +218,6 @@
         private DateTimePicker dtPickerDataRecebimento;
         private Label label1;
         private Label label3;
+        private Panel panel1;
     }
 }
