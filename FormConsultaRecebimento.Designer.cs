@@ -29,51 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaRecebimento));
-            btnSalvar = new Button();
-            dataGridView1 = new DataGridView();
+            btnPesquisar = new Button();
+            dgvRecebimento = new DataGridView();
             tboxFornecedor = new TextBox();
             label7 = new Label();
             btnVoltar = new Button();
-            textBox1 = new TextBox();
+            tboxMaterial = new TextBox();
             label2 = new Label();
             dtPickerDataRecebimento = new DateTimePicker();
             label1 = new Label();
             label3 = new Label();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecebimento).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // btnSalvar
+            // btnPesquisar
             // 
-            btnSalvar.Anchor = AnchorStyles.Top;
-            btnSalvar.BackColor = Color.LightSeaGreen;
-            btnSalvar.BackgroundImageLayout = ImageLayout.Center;
-            btnSalvar.FlatAppearance.BorderColor = Color.DodgerBlue;
-            btnSalvar.FlatAppearance.BorderSize = 0;
-            btnSalvar.FlatStyle = FlatStyle.Flat;
-            btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F);
-            btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.ImeMode = ImeMode.NoControl;
-            btnSalvar.Location = new Point(644, 107);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Padding = new Padding(0, 0, 0, 4);
-            btnSalvar.RightToLeft = RightToLeft.No;
-            btnSalvar.Size = new Size(126, 36);
-            btnSalvar.TabIndex = 14;
-            btnSalvar.Text = "Pesquisar";
-            btnSalvar.TextAlign = ContentAlignment.TopCenter;
-            btnSalvar.UseVisualStyleBackColor = false;
+            btnPesquisar.Anchor = AnchorStyles.Top;
+            btnPesquisar.BackColor = Color.LightSeaGreen;
+            btnPesquisar.BackgroundImageLayout = ImageLayout.Center;
+            btnPesquisar.FlatAppearance.BorderColor = Color.DodgerBlue;
+            btnPesquisar.FlatAppearance.BorderSize = 0;
+            btnPesquisar.FlatStyle = FlatStyle.Flat;
+            btnPesquisar.Font = new Font("SAPGUI-Icons", 15.75F);
+            btnPesquisar.ForeColor = SystemColors.ButtonHighlight;
+            btnPesquisar.ImeMode = ImeMode.NoControl;
+            btnPesquisar.Location = new Point(644, 107);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Padding = new Padding(0, 0, 0, 4);
+            btnPesquisar.RightToLeft = RightToLeft.No;
+            btnPesquisar.Size = new Size(126, 36);
+            btnPesquisar.TabIndex = 14;
+            btnPesquisar.Text = "Pesquisar";
+            btnPesquisar.TextAlign = ContentAlignment.TopCenter;
+            btnPesquisar.UseVisualStyleBackColor = false;
+            btnPesquisar.Click += btnPesquisar_Click;
             // 
-            // dataGridView1
+            // dgvRecebimento
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(32, 163);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(861, 358);
-            dataGridView1.TabIndex = 15;
+            dgvRecebimento.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecebimento.BackgroundColor = Color.White;
+            dgvRecebimento.BorderStyle = BorderStyle.Fixed3D;
+            dgvRecebimento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecebimento.Location = new Point(32, 157);
+            dgvRecebimento.Name = "dgvRecebimento";
+            dgvRecebimento.Size = new Size(861, 358);
+            dgvRecebimento.TabIndex = 15;
             // 
             // tboxFornecedor
             // 
@@ -119,14 +121,14 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // textBox1
+            // tboxMaterial
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("SAPGUI-Icons", 14.25F);
-            textBox1.Location = new Point(311, 109);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(153, 30);
-            textBox1.TabIndex = 19;
+            tboxMaterial.BorderStyle = BorderStyle.FixedSingle;
+            tboxMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
+            tboxMaterial.Location = new Point(311, 109);
+            tboxMaterial.Name = "tboxMaterial";
+            tboxMaterial.Size = new Size(153, 30);
+            tboxMaterial.TabIndex = 19;
             // 
             // label2
             // 
@@ -189,17 +191,17 @@
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(dtPickerDataRecebimento);
-            Controls.Add(textBox1);
+            Controls.Add(tboxMaterial);
             Controls.Add(btnVoltar);
             Controls.Add(tboxFornecedor);
-            Controls.Add(dataGridView1);
-            Controls.Add(btnSalvar);
+            Controls.Add(dgvRecebimento);
+            Controls.Add(btnPesquisar);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormConsultaRecebimento";
             StartPosition = FormStartPosition.CenterParent;
             Text = "RecvPB - Consultar Recebimentos";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecebimento).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -208,12 +210,12 @@
 
         #endregion
 
-        private Button btnSalvar;
-        private DataGridView dataGridView1;
+        private Button btnPesquisar;
+        private DataGridView dgvRecebimento;
         private TextBox tboxFornecedor;
         private Label label7;
         private Button btnVoltar;
-        private TextBox textBox1;
+        private TextBox tboxMaterial;
         private Label label2;
         private DateTimePicker dtPickerDataRecebimento;
         private Label label1;

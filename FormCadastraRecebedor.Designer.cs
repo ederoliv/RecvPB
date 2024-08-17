@@ -50,7 +50,7 @@
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(32, 527);
+            btnVoltar.Location = new Point(41, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
@@ -120,9 +120,9 @@
             dgvRecebedores.BackgroundColor = Color.White;
             dgvRecebedores.BorderStyle = BorderStyle.Fixed3D;
             dgvRecebedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRecebedores.Location = new Point(195, 214);
+            dgvRecebedores.Location = new Point(195, 205);
             dgvRecebedores.Name = "dgvRecebedores";
-            dgvRecebedores.Size = new Size(527, 296);
+            dgvRecebedores.Size = new Size(527, 309);
             dgvRecebedores.TabIndex = 28;
             // 
             // panel1

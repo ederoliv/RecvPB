@@ -66,19 +66,21 @@
             // tboxCodFornecedor
             // 
             tboxCodFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxCodFornecedor.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tboxCodFornecedor.Font = new Font("SAPGUI-Icons", 15.75F);
             tboxCodFornecedor.Location = new Point(188, 106);
             tboxCodFornecedor.Name = "tboxCodFornecedor";
-            tboxCodFornecedor.Size = new Size(158, 35);
+            tboxCodFornecedor.PlaceholderText = "   Ex: 123456";
+            tboxCodFornecedor.Size = new Size(158, 32);
             tboxCodFornecedor.TabIndex = 15;
             // 
             // tboxNomeFornecedor
             // 
             tboxNomeFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxNomeFornecedor.Font = new Font("SAPGUI-Icons", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tboxNomeFornecedor.Font = new Font("SAPGUI-Icons", 15.75F);
             tboxNomeFornecedor.Location = new Point(375, 106);
             tboxNomeFornecedor.Name = "tboxNomeFornecedor";
-            tboxNomeFornecedor.Size = new Size(340, 35);
+            tboxNomeFornecedor.PlaceholderText = "  Ex: EMPRESA DO JOAO LTDA";
+            tboxNomeFornecedor.Size = new Size(340, 32);
             tboxNomeFornecedor.TabIndex = 16;
             // 
             // label1
@@ -111,7 +113,7 @@
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(188, 504);
+            btnVoltar.Location = new Point(188, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
@@ -128,9 +130,9 @@
             dgvFornecedores.BackgroundColor = Color.White;
             dgvFornecedores.BorderStyle = BorderStyle.Fixed3D;
             dgvFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFornecedores.Location = new Point(188, 216);
+            dgvFornecedores.Location = new Point(188, 210);
             dgvFornecedores.Name = "dgvFornecedores";
-            dgvFornecedores.Size = new Size(527, 263);
+            dgvFornecedores.Size = new Size(527, 305);
             dgvFornecedores.TabIndex = 29;
             // 
             // panel1

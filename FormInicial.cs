@@ -16,7 +16,9 @@ namespace RecvPB
         private void Form1_Load(object sender, EventArgs e)
         {            
             comboBoxRecebedores.DisplayMember = "nome";
-            comboBoxRecebedores.DataSource = RecebedoresRepository.BuscaTodosRecebedoresNome();               
+            comboBoxRecebedores.DataSource = RecebedoresRepository.BuscaTodosRecebedoresNome();
+
+            CarregaGridRecebimento();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace RecvPB
                 RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
 
                 LimpaCamposFormInicial();
+                CarregaGridRecebimento();
             }
 
         }
@@ -64,6 +67,38 @@ namespace RecvPB
             tBoxQuantidade.Text = string.Empty;
             tBoxNumeroLote.Text = string.Empty;
 
+        }
+
+        private void CarregaGridRecebimento()
+        {
+            try
+            {
+
+                DataTable dtRecebimento = RecebimentoRepository.BuscaUltimosVinteRecebimentos();
+
+                if (dtRecebimento.Rows.Count > 0)
+                {
+
+                    dgvRecebimento.DataSource = dtRecebimento;
+
+                    dgvRecebimento.Columns[0].HeaderText = "Código";
+                    dgvRecebimento.Columns[1].HeaderText = "Cód Fonecedor";
+                    dgvRecebimento.Columns[2].HeaderText = "Cód Material";
+                    dgvRecebimento.Columns[3].HeaderText = "Data Recebimento";
+                    dgvRecebimento.Columns[4].HeaderText = "Recebido Por";
+                    dgvRecebimento.Columns[5].HeaderText = "Quantidade";
+                    dgvRecebimento.Columns[6].HeaderText = "Nro Lote";
+
+                }
+                else
+                {
+                    MessageBox.Show("Nenhum recebimento encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar os recebimentos: " + ex.Message);
+            }
         }
     }
 }

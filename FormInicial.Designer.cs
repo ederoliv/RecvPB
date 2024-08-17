@@ -49,16 +49,17 @@ namespace RecvPB
             btnCadastraRecebedor = new Button();
             btnCadastraFornecedor = new Button();
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvRecebimento = new DataGridView();
+            label8 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecebimento).BeginInit();
             SuspendLayout();
             // 
             // comboBoxRecebedores
             // 
             comboBoxRecebedores.Font = new Font("SAPGUI-Icons", 14.25F);
             comboBoxRecebedores.FormattingEnabled = true;
-            comboBoxRecebedores.Location = new Point(594, 89);
+            comboBoxRecebedores.Location = new Point(594, 85);
             comboBoxRecebedores.Name = "comboBoxRecebedores";
             comboBoxRecebedores.Size = new Size(184, 29);
             comboBoxRecebedores.TabIndex = 0;
@@ -67,8 +68,9 @@ namespace RecvPB
             // 
             tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
             tboxFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxFornecedor.Location = new Point(139, 88);
+            tboxFornecedor.Location = new Point(139, 84);
             tboxFornecedor.Name = "tboxFornecedor";
+            tboxFornecedor.PlaceholderText = "  Ex: 123456";
             tboxFornecedor.Size = new Size(153, 30);
             tboxFornecedor.TabIndex = 1;
             // 
@@ -76,8 +78,9 @@ namespace RecvPB
             // 
             tBoxMaterial.BorderStyle = BorderStyle.FixedSingle;
             tBoxMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxMaterial.Location = new Point(139, 143);
+            tBoxMaterial.Location = new Point(139, 139);
             tBoxMaterial.Name = "tBoxMaterial";
+            tBoxMaterial.PlaceholderText = "  Ex: B1234";
             tBoxMaterial.Size = new Size(153, 30);
             tBoxMaterial.TabIndex = 2;
             // 
@@ -85,8 +88,9 @@ namespace RecvPB
             // 
             tBoxQuantidade.BorderStyle = BorderStyle.FixedSingle;
             tBoxQuantidade.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxQuantidade.Location = new Point(359, 144);
+            tBoxQuantidade.Location = new Point(359, 140);
             tBoxQuantidade.Name = "tBoxQuantidade";
+            tBoxQuantidade.PlaceholderText = "Ex: 10";
             tBoxQuantidade.Size = new Size(153, 30);
             tBoxQuantidade.TabIndex = 3;
             // 
@@ -94,8 +98,9 @@ namespace RecvPB
             // 
             tBoxNumeroLote.BorderStyle = BorderStyle.FixedSingle;
             tBoxNumeroLote.Font = new Font("SAPGUI-Icons", 14.25F);
-            tBoxNumeroLote.Location = new Point(594, 143);
+            tBoxNumeroLote.Location = new Point(594, 139);
             tBoxNumeroLote.Name = "tBoxNumeroLote";
+            tBoxNumeroLote.PlaceholderText = "  Ex: 1234567";
             tBoxNumeroLote.Size = new Size(153, 30);
             tBoxNumeroLote.TabIndex = 4;
             // 
@@ -105,7 +110,7 @@ namespace RecvPB
             dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
             dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
             dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(359, 89);
+            dtPickerDataRecebimento.Location = new Point(359, 85);
             dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
             dtPickerDataRecebimento.Size = new Size(131, 30);
             dtPickerDataRecebimento.TabIndex = 5;
@@ -114,7 +119,7 @@ namespace RecvPB
             // 
             label1.AutoSize = true;
             label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(142, 65);
+            label1.Location = new Point(142, 61);
             label1.Name = "label1";
             label1.Size = new Size(87, 21);
             label1.TabIndex = 6;
@@ -124,7 +129,7 @@ namespace RecvPB
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(362, 66);
+            label2.Location = new Point(362, 62);
             label2.Name = "label2";
             label2.Size = new Size(131, 21);
             label2.TabIndex = 7;
@@ -134,7 +139,7 @@ namespace RecvPB
             // 
             label3.AutoSize = true;
             label3.Font = new Font("SAPGUI-Icons", 14.25F);
-            label3.Location = new Point(597, 66);
+            label3.Location = new Point(597, 62);
             label3.Name = "label3";
             label3.Size = new Size(100, 21);
             label3.TabIndex = 8;
@@ -144,7 +149,7 @@ namespace RecvPB
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SAPGUI-Icons", 14.25F);
-            label4.Location = new Point(142, 120);
+            label4.Location = new Point(142, 116);
             label4.Name = "label4";
             label4.Size = new Size(64, 21);
             label4.TabIndex = 9;
@@ -154,7 +159,7 @@ namespace RecvPB
             // 
             label5.AutoSize = true;
             label5.Font = new Font("SAPGUI-Icons", 14.25F);
-            label5.Location = new Point(362, 121);
+            label5.Location = new Point(362, 117);
             label5.Name = "label5";
             label5.Size = new Size(88, 21);
             label5.TabIndex = 10;
@@ -164,7 +169,7 @@ namespace RecvPB
             // 
             label6.AutoSize = true;
             label6.Font = new Font("SAPGUI-Icons", 14.25F);
-            label6.Location = new Point(597, 120);
+            label6.Location = new Point(597, 116);
             label6.Name = "label6";
             label6.Size = new Size(96, 21);
             label6.TabIndex = 11;
@@ -180,7 +185,7 @@ namespace RecvPB
             btnSalvar.FlatStyle = FlatStyle.Flat;
             btnSalvar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalvar.ForeColor = SystemColors.ButtonHighlight;
-            btnSalvar.Location = new Point(139, 182);
+            btnSalvar.Location = new Point(139, 179);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Padding = new Padding(0, 0, 0, 4);
             btnSalvar.RightToLeft = RightToLeft.No;
@@ -216,7 +221,7 @@ namespace RecvPB
             btnConsultarRecebimentos.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnConsultarRecebimentos.ForeColor = Color.White;
             btnConsultarRecebimentos.ImageAlign = ContentAlignment.TopCenter;
-            btnConsultarRecebimentos.Location = new Point(139, 469);
+            btnConsultarRecebimentos.Location = new Point(139, 456);
             btnConsultarRecebimentos.Name = "btnConsultarRecebimentos";
             btnConsultarRecebimentos.Padding = new Padding(0, 0, 0, 4);
             btnConsultarRecebimentos.RightToLeft = RightToLeft.No;
@@ -238,7 +243,7 @@ namespace RecvPB
             btnCadastraRecebedor.FlatStyle = FlatStyle.Flat;
             btnCadastraRecebedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCadastraRecebedor.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastraRecebedor.Location = new Point(587, 469);
+            btnCadastraRecebedor.Location = new Point(587, 456);
             btnCadastraRecebedor.Name = "btnCadastraRecebedor";
             btnCadastraRecebedor.Padding = new Padding(0, 0, 0, 3);
             btnCadastraRecebedor.RightToLeft = RightToLeft.No;
@@ -260,7 +265,7 @@ namespace RecvPB
             btnCadastraFornecedor.FlatStyle = FlatStyle.Flat;
             btnCadastraFornecedor.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCadastraFornecedor.ForeColor = SystemColors.ButtonHighlight;
-            btnCadastraFornecedor.Location = new Point(362, 469);
+            btnCadastraFornecedor.Location = new Point(362, 456);
             btnCadastraFornecedor.Name = "btnCadastraFornecedor";
             btnCadastraFornecedor.Padding = new Padding(0, 0, 0, 4);
             btnCadastraFornecedor.RightToLeft = RightToLeft.No;
@@ -280,14 +285,24 @@ namespace RecvPB
             panel1.Size = new Size(880, 56);
             panel1.TabIndex = 25;
             // 
-            // dataGridView1
+            // dgvRecebimento
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(139, 228);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(639, 229);
-            dataGridView1.TabIndex = 26;
+            dgvRecebimento.BackgroundColor = Color.White;
+            dgvRecebimento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecebimento.Location = new Point(72, 225);
+            dgvRecebimento.Name = "dgvRecebimento";
+            dgvRecebimento.Size = new Size(781, 226);
+            dgvRecebimento.TabIndex = 26;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("SAPGUI-Icons", 14.25F);
+            label8.Location = new Point(384, 201);
+            label8.Name = "label8";
+            label8.Size = new Size(169, 21);
+            label8.TabIndex = 27;
+            label8.Text = "Últimos 10 recebimentos:";
             // 
             // FormInicial
             // 
@@ -295,7 +310,8 @@ namespace RecvPB
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(925, 602);
-            Controls.Add(dataGridView1);
+            Controls.Add(label8);
+            Controls.Add(dgvRecebimento);
             Controls.Add(panel1);
             Controls.Add(btnCadastraFornecedor);
             Controls.Add(btnCadastraRecebedor);
@@ -323,7 +339,7 @@ namespace RecvPB
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRecebimento).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -348,6 +364,7 @@ namespace RecvPB
         private Button btnCadastraRecebedor;
         private Button btnCadastraFornecedor;
         private Panel panel1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvRecebimento;
+        private Label label8;
     }
 }
