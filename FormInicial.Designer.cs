@@ -303,7 +303,7 @@ namespace RecvPB
             label8.Name = "label8";
             label8.Size = new Size(169, 21);
             label8.TabIndex = 27;
-            label8.Text = "Últimos 10 recebimentos:";
+            label8.Text = "Últimos 20 recebimentos:";
             // 
             // button1
             // 

@@ -8,24 +8,29 @@ namespace RecvPB.Repository
 {
     internal class DatabaseConnection
     {
-        private string connectionString;
+        private string connectionStringDbRecebedores;
+        private string connectionStringDbPrincipal;
 
-        public DatabaseConnection()
+        public void SetConnectionStringDbRecebedores()
         {
-            // Obtém o caminho do diretório de execução do aplicativo
-            string basePath = AppDomain.CurrentDomain.BaseDirectory;
-
-            // Constrói o caminho completo para o banco de dados na pasta properties
-            string dbPath = Path.Combine(basePath, "properties", "recebedores.accdb");
-
-            // Constrói a string de conexão usando o caminho completo
-            connectionString = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"{dbPath}\";Persist Security Info=False;";
+            this.connectionStringDbRecebedores = "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n";
+        }
+        public string GetConnectionStringDbRecebedores()
+        {
+            SetConnectionStringDbRecebedores();
+            return this.connectionStringDbRecebedores;
         }
 
-        // Método para obter a string de conexão (opcional)
-        public string GetConnectionString()
+        public void SetConnectionStringDbPrincipal()
         {
-            return connectionString;
+            this.connectionStringDbPrincipal = "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n";
+        }
+
+        public string GetConnectionStringDbPrincipal()
+        {
+
+            SetConnectionStringDbPrincipal();
+            return this.connectionStringDbPrincipal;
         }
     }
 }

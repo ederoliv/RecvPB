@@ -12,8 +12,8 @@ namespace RecvPB.Repository
     internal static class FornecedoresRepository
     {
         public static Boolean InsereFornecedor(string CodigoFornecedor, string NomeFornecedor) {
-
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
             {
                 try
                 {
@@ -40,8 +40,8 @@ namespace RecvPB.Repository
             }
         }
         public static DataTable BuscaTodosFornecedoresNomeId() {
-
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
             {
                 try
                 {

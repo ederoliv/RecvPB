@@ -15,9 +15,9 @@ namespace RecvPB.Repository
 
         public static void InserirRecebimento(string fonecedor, string material, string dataRecebimento, string recebedor, string quantidade, string numeroLote)
         {
-            DatabaseConnection connect = new DatabaseConnection();
+            DatabaseConnection databaseConnection = new DatabaseConnection();
 
-            using (OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\eder.oliveira\Desktop\RecvPB\RecvPB\371.accdb;Persist Security Info=False;"))
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
             {
                 try
                 {
@@ -55,7 +55,8 @@ namespace RecvPB.Repository
 
         public static DataTable BuscaPorFornecedorOuMaterial(string Fornecedor, string Material)
         {
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
             {
                 try
                 {
@@ -84,7 +85,8 @@ namespace RecvPB.Repository
 
         public static DataTable BuscaUltimosVinteRecebimentos()
         {
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
             {
                 try
                 {

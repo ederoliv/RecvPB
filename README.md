@@ -18,7 +18,7 @@ No sistema nós temos que pontuar algumas entidades que são fundamentais para que
 - [x] Recebimento
 
 ### 1 - Tela inicial/Registro de entrada de produtos
-	Na tela inicial o usuário possui acesso ao formulário principal do sistema, onde será feito o registro dos produtos
+   Na tela inicial o usuário possui acesso ao formulário principal do sistema, onde será feito o registro dos produtos
 que entram no almoxarifado central. Há uma validação para que nenhum dos campos que iniciam vazios(Fornecedor, Material, Quantidade e Número do Lote) 
 estejam sem dados quando o usuário registrar o recebimento. Também há uma tabela que é carregada no Load do form que contém os 10 últimos registros
 de recebimento.
@@ -27,6 +27,7 @@ de recebimento.
 
 
 ### 2 - Tela de consulta de recebimentos
+   A
 ![consulta-recebimento](/Resources/screenshots/consulta-recebimento.png)
 
 ### 3 - Tela de cadastro de fonecedores

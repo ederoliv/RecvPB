@@ -14,7 +14,8 @@ namespace RecvPB.Repository
         public static DataTable BuscaTodosRecebedoresNome()
         {
 
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbRecebedores()))
             {
                 try
                 {
@@ -39,8 +40,8 @@ namespace RecvPB.Repository
 
         public static DataTable BuscaTodosRecebedoresNomeId()
         {
-
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbRecebedores()))
             {
                 try
                 {
@@ -64,9 +65,9 @@ namespace RecvPB.Repository
 
         public static Boolean InsereRecebedor(string nome)
         {
-            //DatabaseConnection conn = new DatabaseConnection();
 
-            using (OleDbConnection connection = new OleDbConnection("\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"))
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbRecebedores()))
             {
                 try
                 {
