@@ -1,5 +1,5 @@
 # RecvPB 
-## Software desenvolvido em .NET Framework (C# Windows Forms e Access database), co objetivo que suprir uma necessidade específica no recebimento do almoxarifado central da empresa Progás Braesi.
+## Software desenvolvido em .NET Framework (C# Windows Forms e Access database), com objetivo que suprir uma necessidade específica no recebimento do almoxarifado central da empresa Progás Braesi.
 
 No recebimento de alguns produtos (motores, chicotes elétricos etc) há a necessidade de um controle dos produtos que entram, para fins de auditoria,
 de modo que em caso de defeito em algum lote dos produtos, seja possível identificar a data de entrada do lote, o fornecedor e quantos itens desde
