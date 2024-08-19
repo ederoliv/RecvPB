@@ -14,7 +14,7 @@ namespace RecvPB
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             comboBoxRecebedores.DisplayMember = "nome";
             comboBoxRecebedores.DataSource = RecebedoresRepository.BuscaTodosRecebedoresNome();
 
@@ -99,6 +99,12 @@ namespace RecvPB
             {
                 MessageBox.Show("Erro ao carregar os recebimentos: " + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCadastraProduto formCadastraProduto = new FormCadastraProduto();
+            formCadastraProduto.ShowDialog();
         }
     }
 }

@@ -45,7 +45,7 @@
             // btnSalvar
             // 
             btnSalvar.Anchor = AnchorStyles.Top;
-            btnSalvar.BackColor = Color.LightSeaGreen;
+            btnSalvar.BackColor = SystemColors.Highlight;
             btnSalvar.BackgroundImageLayout = ImageLayout.Center;
             btnSalvar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnSalvar.FlatAppearance.BorderSize = 0;
@@ -106,7 +106,7 @@
             // btnVoltar
             // 
             btnVoltar.Anchor = AnchorStyles.Top;
-            btnVoltar.BackColor = Color.Goldenrod;
+            btnVoltar.BackColor = Color.Black;
             btnVoltar.BackgroundImageLayout = ImageLayout.Center;
             btnVoltar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnVoltar.FlatAppearance.BorderSize = 0;
@@ -137,22 +137,22 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.MediumSlateBlue;
+            panel1.BackColor = Color.Black;
             panel1.Controls.Add(label3);
-            panel1.Location = new Point(21, 0);
+            panel1.Location = new Point(0, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(880, 56);
+            panel1.Size = new Size(925, 56);
             panel1.TabIndex = 30;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(224, 3);
+            label3.Location = new Point(312, 11);
             label3.Name = "label3";
-            label3.Size = new Size(462, 50);
+            label3.Size = new Size(298, 32);
             label3.TabIndex = 24;
             label3.Text = "Cadastrar novo fornecedor";
             // 

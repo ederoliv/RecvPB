@@ -43,18 +43,18 @@
             // btnVoltar
             // 
             btnVoltar.Anchor = AnchorStyles.Top;
-            btnVoltar.BackColor = Color.Goldenrod;
+            btnVoltar.BackColor = Color.Black;
             btnVoltar.BackgroundImageLayout = ImageLayout.Center;
             btnVoltar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnVoltar.FlatAppearance.BorderSize = 0;
             btnVoltar.FlatStyle = FlatStyle.Flat;
             btnVoltar.Font = new Font("SAPGUI-Icons", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnVoltar.ForeColor = SystemColors.ButtonHighlight;
-            btnVoltar.Location = new Point(41, 527);
+            btnVoltar.Location = new Point(192, 527);
             btnVoltar.Name = "btnVoltar";
             btnVoltar.Padding = new Padding(0, 0, 0, 4);
             btnVoltar.RightToLeft = RightToLeft.No;
-            btnVoltar.Size = new Size(860, 36);
+            btnVoltar.Size = new Size(530, 36);
             btnVoltar.TabIndex = 27;
             btnVoltar.Text = "Voltar";
             btnVoltar.TextAlign = ContentAlignment.TopCenter;
@@ -75,11 +75,11 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(224, 3);
+            label7.Location = new Point(314, 11);
             label7.Name = "label7";
-            label7.Size = new Size(448, 50);
+            label7.Size = new Size(289, 32);
             label7.TabIndex = 24;
             label7.Text = "Cadastrar novo recebedor";
             // 
@@ -96,7 +96,7 @@
             // btnSalvar
             // 
             btnSalvar.Anchor = AnchorStyles.Top;
-            btnSalvar.BackColor = Color.LightSeaGreen;
+            btnSalvar.BackColor = SystemColors.Highlight;
             btnSalvar.BackgroundImageLayout = ImageLayout.Center;
             btnSalvar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnSalvar.FlatAppearance.BorderSize = 0;
@@ -127,11 +127,11 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DodgerBlue;
+            panel1.BackColor = Color.Black;
             panel1.Controls.Add(label7);
-            panel1.Location = new Point(21, 0);
+            panel1.Location = new Point(0, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(880, 56);
+            panel1.Size = new Size(925, 56);
             panel1.TabIndex = 29;
             // 
             // FormCadastraRecebedor

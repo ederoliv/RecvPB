@@ -47,7 +47,7 @@
             // btnPesquisar
             // 
             btnPesquisar.Anchor = AnchorStyles.Top;
-            btnPesquisar.BackColor = Color.LightSeaGreen;
+            btnPesquisar.BackColor = SystemColors.Highlight;
             btnPesquisar.BackgroundImageLayout = ImageLayout.Center;
             btnPesquisar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnPesquisar.FlatAppearance.BorderSize = 0;
@@ -90,19 +90,19 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 27.75F);
+            label7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
             label7.ImeMode = ImeMode.NoControl;
-            label7.Location = new Point(234, 3);
+            label7.Location = new Point(311, 11);
             label7.Name = "label7";
-            label7.Size = new Size(419, 50);
+            label7.Size = new Size(272, 32);
             label7.TabIndex = 17;
             label7.Text = "Consultar Recebimentos";
             // 
             // btnVoltar
             // 
             btnVoltar.Anchor = AnchorStyles.Top;
-            btnVoltar.BackColor = Color.Goldenrod;
+            btnVoltar.BackColor = Color.Black;
             btnVoltar.BackgroundImageLayout = ImageLayout.Center;
             btnVoltar.FlatAppearance.BorderColor = Color.DodgerBlue;
             btnVoltar.FlatAppearance.BorderSize = 0;
@@ -173,11 +173,11 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Goldenrod;
+            panel1.BackColor = Color.Black;
             panel1.Controls.Add(label7);
-            panel1.Location = new Point(21, 0);
+            panel1.Location = new Point(0, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(880, 56);
+            panel1.Size = new Size(925, 56);
             panel1.TabIndex = 24;
             // 
             // FormConsultaRecebimento
