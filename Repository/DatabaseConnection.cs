@@ -14,16 +14,22 @@ namespace RecvPB.Repository
         public void SetConnectionStringDbRecebedores()
         {
             this.connectionStringDbRecebedores = "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n";
+
+            // "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"\\\\domain\\SISTEMAS\\banco-recebimento-teste\\recebedores.accdb\";Persist Security Info=False;\r\n"
+            // "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\recebedores.accdb\";Persist Security Info=False;\r\n"
         }
         public string GetConnectionStringDbRecebedores()
         {
             SetConnectionStringDbRecebedores();
-            return this.connectionStringDbRecebedores;
+            return connectionStringDbRecebedores;
         }
 
         public void SetConnectionStringDbPrincipal()
         {
             this.connectionStringDbPrincipal = "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n";
+
+            // "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"\\\\domain\\SISTEMAS\\banco-recebimento-teste\\371.accdb\";Persist Security Info=False;\r\n"
+            // "\r\nProvider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Users\\eder.oliveira\\Desktop\\RecvPB\\RecvPB\\371.accdb\";Persist Security Info=False;\r\n"
         }
 
         public string GetConnectionStringDbPrincipal()
