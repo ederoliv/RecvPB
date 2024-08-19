@@ -1,5 +1,5 @@
 # RecvPB 
-## Software desenvolvido em .NET Framework (C# Windows Forms e Access database), com objetivo que suprir uma necessidade específica no recebimento do almoxarifado central da empresa Progás Braesi.
+## Software desenvolvido em .NET Framework (C# Windows Forms e Access database), com objetivo de suprir uma necessidade específica no recebimento do almoxarifado central da empresa Progás Braesi.
 
 No recebimento de alguns produtos (motores, chicotes elétricos etc) há a necessidade de um controle dos produtos que entram, para fins de auditoria,
 de modo que em caso de defeito em algum lote dos produtos, seja possível identificar a data de entrada do lote, o fornecedor e quantos itens desde
@@ -18,7 +18,13 @@ No sistema nós temos que pontuar algumas entidades que são fundamentais para que
 - [x] Recebimento
 
 ### 1 - Tela inicial/Registro de entrada de produtos
+	Na tela inicial o usuário possui acesso ao formulário principal do sistema, onde será feito o registro dos produtos
+que entram no almoxarifado central. Há uma validação para que nenhum dos campos que iniciam vazios(Fornecedor, Material, Quantidade e Número do Lote) 
+estejam sem dados quando o usuário registrar o recebimento. Também há uma tabela que é carregada no Load do form que contém os 10 últimos registros
+de recebimento.
+
 ![tela-inicial](/Resources/screenshots/tela-inicial.png)
+
 
 ### 2 - Tela de consulta de recebimentos
 ![consulta-recebimento](/Resources/screenshots/consulta-recebimento.png)
