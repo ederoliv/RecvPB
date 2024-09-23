@@ -30,7 +30,6 @@ namespace RecvPB
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //cadastra produto....
 
             if (String.IsNullOrWhiteSpace(tboxDescricaoProduto.Text) && (String.IsNullOrWhiteSpace(tboxCodProduto.Text)))
             {
@@ -38,12 +37,10 @@ namespace RecvPB
             }
             else
             {
-
                 if (ProdutoRepository.InsereProduto(tboxCodProduto.Text, tboxDescricaoProduto.Text))
                 {
                     MessageBox.Show("Produto cadastrado com sucesso!");
                 }
-
             }
         }
 
