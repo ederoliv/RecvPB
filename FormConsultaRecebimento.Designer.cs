@@ -201,6 +201,7 @@
             Name = "FormConsultaRecebimento";
             StartPosition = FormStartPosition.CenterParent;
             Text = "RecvPB - Consultar Recebimentos";
+            Load += FormConsultaRecebimento_Load;
             ((System.ComponentModel.ISupportInitialize)dgvRecebimento).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

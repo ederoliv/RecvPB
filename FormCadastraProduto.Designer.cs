@@ -30,15 +30,15 @@
         {
             panel1 = new Panel();
             label3 = new Label();
-            dgvFornecedores = new DataGridView();
+            dgvProdutos = new DataGridView();
             btnVoltar = new Button();
             label2 = new Label();
             label1 = new Label();
-            tboxNomeFornecedor = new TextBox();
-            tboxCodFornecedor = new TextBox();
+            tboxDescricaoProduto = new TextBox();
+            tboxCodProduto = new TextBox();
             btnSalvar = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvFornecedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -63,16 +63,16 @@
             label3.Text = "Cadastrar novo produto";
             label3.Click += label3_Click;
             // 
-            // dgvFornecedores
+            // dgvProdutos
             // 
-            dgvFornecedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvFornecedores.BackgroundColor = Color.White;
-            dgvFornecedores.BorderStyle = BorderStyle.Fixed3D;
-            dgvFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFornecedores.Location = new Point(196, 204);
-            dgvFornecedores.Name = "dgvFornecedores";
-            dgvFornecedores.Size = new Size(527, 305);
-            dgvFornecedores.TabIndex = 38;
+            dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProdutos.BackgroundColor = Color.White;
+            dgvProdutos.BorderStyle = BorderStyle.Fixed3D;
+            dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProdutos.Location = new Point(196, 204);
+            dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.Size = new Size(527, 305);
+            dgvProdutos.TabIndex = 38;
             // 
             // btnVoltar
             // 
@@ -115,25 +115,25 @@
             label1.TabIndex = 35;
             label1.Text = "Descrição do Produto";
             // 
-            // tboxNomeFornecedor
+            // tboxDescricaoProduto
             // 
-            tboxNomeFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxNomeFornecedor.Font = new Font("SAPGUI-Icons", 15.75F);
-            tboxNomeFornecedor.Location = new Point(383, 100);
-            tboxNomeFornecedor.Name = "tboxNomeFornecedor";
-            tboxNomeFornecedor.PlaceholderText = "  Ex: MOTOR 1CV 4P D56 110/220V 60HZ";
-            tboxNomeFornecedor.Size = new Size(340, 32);
-            tboxNomeFornecedor.TabIndex = 34;
+            tboxDescricaoProduto.BorderStyle = BorderStyle.FixedSingle;
+            tboxDescricaoProduto.Font = new Font("SAPGUI-Icons", 15.75F);
+            tboxDescricaoProduto.Location = new Point(383, 100);
+            tboxDescricaoProduto.Name = "tboxDescricaoProduto";
+            tboxDescricaoProduto.PlaceholderText = "  Ex: MOTOR 1CV 4P D56 110/220V 60HZ";
+            tboxDescricaoProduto.Size = new Size(340, 32);
+            tboxDescricaoProduto.TabIndex = 34;
             // 
-            // tboxCodFornecedor
+            // tboxCodProduto
             // 
-            tboxCodFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxCodFornecedor.Font = new Font("SAPGUI-Icons", 15.75F);
-            tboxCodFornecedor.Location = new Point(196, 100);
-            tboxCodFornecedor.Name = "tboxCodFornecedor";
-            tboxCodFornecedor.PlaceholderText = "   Ex: P1234";
-            tboxCodFornecedor.Size = new Size(158, 32);
-            tboxCodFornecedor.TabIndex = 33;
+            tboxCodProduto.BorderStyle = BorderStyle.FixedSingle;
+            tboxCodProduto.Font = new Font("SAPGUI-Icons", 15.75F);
+            tboxCodProduto.Location = new Point(196, 100);
+            tboxCodProduto.Name = "tboxCodProduto";
+            tboxCodProduto.PlaceholderText = "   Ex: P1234";
+            tboxCodProduto.Size = new Size(158, 32);
+            tboxCodProduto.TabIndex = 33;
             // 
             // btnSalvar
             // 
@@ -162,21 +162,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(925, 575);
-            Controls.Add(dgvFornecedores);
+            Controls.Add(dgvProdutos);
             Controls.Add(btnVoltar);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(tboxNomeFornecedor);
-            Controls.Add(tboxCodFornecedor);
+            Controls.Add(tboxDescricaoProduto);
+            Controls.Add(tboxCodProduto);
             Controls.Add(btnSalvar);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormCadastraProduto";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FormCadastraProduto";
+            Load += FormCadastraProduto_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvFornecedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,12 +186,12 @@
 
         private Panel panel1;
         private Label label3;
-        private DataGridView dgvFornecedores;
+        private DataGridView dgvProdutos;
         private Button btnVoltar;
         private Label label2;
         private Label label1;
-        private TextBox tboxNomeFornecedor;
-        private TextBox tboxCodFornecedor;
+        private TextBox tboxDescricaoProduto;
+        private TextBox tboxCodProduto;
         private Button btnSalvar;
     }
 }

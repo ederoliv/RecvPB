@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>recvpb_1.ico</ApplicationIcon>
+    <BaseOutputPath>\\sv-domain\users\eder.oliveira\Meus Documentos\Prod</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="recvpb_1.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Intersoft.Crosslight" Version="6.0.5000.975" />

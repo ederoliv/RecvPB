@@ -25,11 +25,19 @@ namespace RecvPB
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            CarregaGridRecebimento();
+            if (!String.IsNullOrEmpty(tboxFornecedor.Text) || !String.IsNullOrEmpty(tboxMaterial.Text))
+            {
+                CarregaGridRecebimento();
+            }
+            else
+            {
+                MessageBox.Show("Preencha pelo menos um dos campos vazios!");
+            }
         }
 
         private void CarregaGridRecebimento()
         {
+
             try
             {
 
@@ -51,13 +59,18 @@ namespace RecvPB
                 }
                 else
                 {
-                    MessageBox.Show("Nenhum recebimento encontrado.");
+                    MessageBox.Show("Nenhum recebimento encontrado: verifique se o código do Material ou do Fornecedor está correto!");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar os recebimentos: " + ex.Message);
             }
+        }
+
+        private void FormConsultaRecebimento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
