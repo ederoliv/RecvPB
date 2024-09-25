@@ -1,12 +1,5 @@
-﻿using RecvPB.Model;
-using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace RecvPB.Repository
 {
@@ -53,7 +46,7 @@ namespace RecvPB.Repository
             }
         }
 
-        public static DataTable BuscaPorFornecedorOuMaterial(string Fornecedor, string Material)
+        public static DataTable BuscaPorLote(string Lote)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
@@ -61,13 +54,15 @@ namespace RecvPB.Repository
                 try
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Recebimento WHERE cod_for = ? OR cod_mat = ?";
+                    // Incluindo nro_lote na consulta SQL
+                    string query = "SELECT * FROM Recebimento WHERE nro_lote = ?";
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@cod_for", Fornecedor); 
-                        command.Parameters.AddWithValue("@cod_mat", Material);
 
+                        command.Parameters.AddWithValue("@nro_lote", Lote); 
+
+                        // Executando a consulta
                         OleDbDataAdapter adapter = new OleDbDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
@@ -77,7 +72,7 @@ namespace RecvPB.Repository
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao carregar fornecedores: " + ex.Message);
+                    MessageBox.Show("Erro ao carregar recebimentos: " + ex.Message);
                     return new DataTable();
                 }
             }

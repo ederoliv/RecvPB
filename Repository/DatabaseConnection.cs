@@ -24,13 +24,13 @@ namespace RecvPB.Repository
 
         public void SetConnectionStringDbRecebedores()
         {
-            this.connectionStringDbRecebedores = strConnectionDbRecebedoresLocalTest;
+            this.connectionStringDbRecebedores = strConnectionDbRecebedoresLocalTest; //Definir aqui o banco de dados dos recebedores
 
         }
 
         public void SetConnectionStringDbPrincipal()
         {
-            this.connectionStringDbPrincipal = strConnectionDbPrincipalLocalTest;
+            this.connectionStringDbPrincipal = strConnectionDbPrincipalLocalTest; //Definir aqui o banco de dados principal
         }
 
         public string GetConnectionStringDbRecebedores()

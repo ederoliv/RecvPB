@@ -31,15 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaRecebimento));
             btnPesquisar = new Button();
             dgvRecebimento = new DataGridView();
-            tboxFornecedor = new TextBox();
             label7 = new Label();
             btnVoltar = new Button();
-            tboxMaterial = new TextBox();
+            panel1 = new Panel();
+            label4 = new Label();
+            tbNumeroLote = new TextBox();
             label2 = new Label();
             dtPickerDataRecebimento = new DateTimePicker();
-            label1 = new Label();
-            label3 = new Label();
-            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvRecebimento).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -55,7 +53,7 @@
             btnPesquisar.Font = new Font("SAPGUI-Icons", 15.75F);
             btnPesquisar.ForeColor = SystemColors.ButtonHighlight;
             btnPesquisar.ImeMode = ImeMode.NoControl;
-            btnPesquisar.Location = new Point(644, 107);
+            btnPesquisar.Location = new Point(566, 101);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Padding = new Padding(0, 0, 0, 4);
             btnPesquisar.RightToLeft = RightToLeft.No;
@@ -76,15 +74,6 @@
             dgvRecebimento.Name = "dgvRecebimento";
             dgvRecebimento.Size = new Size(861, 358);
             dgvRecebimento.TabIndex = 15;
-            // 
-            // tboxFornecedor
-            // 
-            tboxFornecedor.BorderStyle = BorderStyle.FixedSingle;
-            tboxFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxFornecedor.Location = new Point(132, 109);
-            tboxFornecedor.Name = "tboxFornecedor";
-            tboxFornecedor.Size = new Size(153, 30);
-            tboxFornecedor.TabIndex = 16;
             // 
             // label7
             // 
@@ -121,56 +110,6 @@
             btnVoltar.UseVisualStyleBackColor = false;
             btnVoltar.Click += btnVoltar_Click;
             // 
-            // tboxMaterial
-            // 
-            tboxMaterial.BorderStyle = BorderStyle.FixedSingle;
-            tboxMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
-            tboxMaterial.Location = new Point(311, 109);
-            tboxMaterial.Name = "tboxMaterial";
-            tboxMaterial.Size = new Size(153, 30);
-            tboxMaterial.TabIndex = 19;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(489, 86);
-            label2.Name = "label2";
-            label2.Size = new Size(131, 21);
-            label2.TabIndex = 21;
-            label2.Text = "Data Recebimento:";
-            // 
-            // dtPickerDataRecebimento
-            // 
-            dtPickerDataRecebimento.Checked = false;
-            dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
-            dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
-            dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(489, 109);
-            dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
-            dtPickerDataRecebimento.Size = new Size(131, 30);
-            dtPickerDataRecebimento.TabIndex = 20;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("SAPGUI-Icons", 14.25F);
-            label1.Location = new Point(135, 86);
-            label1.Name = "label1";
-            label1.Size = new Size(135, 21);
-            label1.TabIndex = 22;
-            label1.Text = "Código Fornecedor:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("SAPGUI-Icons", 14.25F);
-            label3.Location = new Point(314, 86);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 21);
-            label3.TabIndex = 23;
-            label3.Text = "Código Material:";
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
@@ -180,20 +119,58 @@
             panel1.Size = new Size(925, 56);
             panel1.TabIndex = 24;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("SAPGUI-Icons", 14.25F);
+            label4.Location = new Point(198, 83);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 21);
+            label4.TabIndex = 26;
+            label4.Text = "Nº Lote:";
+            // 
+            // tbNumeroLote
+            // 
+            tbNumeroLote.BorderStyle = BorderStyle.FixedSingle;
+            tbNumeroLote.Font = new Font("SAPGUI-Icons", 14.25F);
+            tbNumeroLote.Location = new Point(195, 106);
+            tbNumeroLote.Name = "tbNumeroLote";
+            tbNumeroLote.Size = new Size(152, 30);
+            tbNumeroLote.TabIndex = 25;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("SAPGUI-Icons", 14.25F);
+            label2.Location = new Point(398, 83);
+            label2.Name = "label2";
+            label2.Size = new Size(131, 21);
+            label2.TabIndex = 28;
+            label2.Text = "Data Recebimento:";
+            // 
+            // dtPickerDataRecebimento
+            // 
+            dtPickerDataRecebimento.Checked = false;
+            dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
+            dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
+            dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
+            dtPickerDataRecebimento.Location = new Point(395, 106);
+            dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
+            dtPickerDataRecebimento.Size = new Size(131, 30);
+            dtPickerDataRecebimento.TabIndex = 27;
+            // 
             // FormConsultaRecebimento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(925, 575);
-            Controls.Add(panel1);
-            Controls.Add(label3);
-            Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(dtPickerDataRecebimento);
-            Controls.Add(tboxMaterial);
+            Controls.Add(label4);
+            Controls.Add(tbNumeroLote);
+            Controls.Add(panel1);
             Controls.Add(btnVoltar);
-            Controls.Add(tboxFornecedor);
             Controls.Add(dgvRecebimento);
             Controls.Add(btnPesquisar);
             FormBorderStyle = FormBorderStyle.None;
@@ -213,14 +190,12 @@
 
         private Button btnPesquisar;
         private DataGridView dgvRecebimento;
-        private TextBox tboxFornecedor;
         private Label label7;
         private Button btnVoltar;
-        private TextBox tboxMaterial;
+        private Panel panel1;
+        private Label label4;
+        private TextBox tbNumeroLote;
         private Label label2;
         private DateTimePicker dtPickerDataRecebimento;
-        private Label label1;
-        private Label label3;
-        private Panel panel1;
     }
 }
