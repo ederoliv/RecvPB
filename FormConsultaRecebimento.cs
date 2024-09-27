@@ -17,12 +17,13 @@ namespace RecvPB
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
-        {   
-            
-            if (!String.IsNullOrEmpty(tbNumeroLote.Text))
+        {
+        
+
+            if (!String.IsNullOrEmpty(tbCodFornecedor.Text) || !String.IsNullOrEmpty(tbCodMaterial.Text) || !String.IsNullOrEmpty(tbNumeroLote.Text))
             {
 
-                CarregaGridRecebimento(tbNumeroLote.Text);
+                CarregaGridRecebimento(tbCodFornecedor.Text,tbCodMaterial.Text, tbNumeroLote.Text);
 
             }
             else
@@ -31,11 +32,11 @@ namespace RecvPB
             }
         }
 
-        private void CarregaGridRecebimento(string NumeroLote)
+        private void CarregaGridRecebimento(string CodFornecedor , string CodMaterial,string NumeroLote)
         {
             try
             {
-                DataTable dtRecebimento = RecebimentoRepository.BuscaPorLote(NumeroLote);
+                DataTable dtRecebimento = RecebimentoRepository.BuscaPorFonecedorMaterialOuLote(CodFornecedor,CodMaterial, NumeroLote);
 
                 if (dtRecebimento.Rows.Count > 0)
                 {
@@ -64,7 +65,12 @@ namespace RecvPB
 
         private void FormConsultaRecebimento_Load(object sender, EventArgs e)
         {
-           //code 
+            //code 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

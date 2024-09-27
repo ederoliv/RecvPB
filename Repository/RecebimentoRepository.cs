@@ -46,7 +46,7 @@ namespace RecvPB.Repository
             }
         }
 
-        public static DataTable BuscaPorLote(string Lote)
+        public static DataTable BuscaPorFonecedorMaterialOuLote(string CodFornecedor,string CodMaterial, string Lote)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
@@ -54,13 +54,20 @@ namespace RecvPB.Repository
                 try
                 {
                     connection.Open();
-                    // Incluindo nro_lote na consulta SQL
-                    string query = "SELECT * FROM Recebimento WHERE nro_lote = ?";
+                    
+                    string query = "SELECT * FROM Recebimento WHERE 1=1";
+
+                    if (!string.IsNullOrEmpty(CodFornecedor))
+                        query += $"and cod_for = {CodFornecedor}";
+
+                    if (!string.IsNullOrEmpty(CodMaterial))
+                        query += $"and cod_mat = '{CodMaterial}'";
+                    
+                    if (!string.IsNullOrWhiteSpace(Lote))
+                         query += $"and nro_lote = {Lote}";
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-
-                        command.Parameters.AddWithValue("@nro_lote", Lote); 
 
                         // Executando a consulta
                         OleDbDataAdapter adapter = new OleDbDataAdapter(command);

@@ -36,8 +36,10 @@
             panel1 = new Panel();
             label4 = new Label();
             tbNumeroLote = new TextBox();
+            tbCodFornecedor = new TextBox();
+            tbCodMaterial = new TextBox();
+            label1 = new Label();
             label2 = new Label();
-            dtPickerDataRecebimento = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dgvRecebimento).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -53,7 +55,7 @@
             btnPesquisar.Font = new Font("SAPGUI-Icons", 15.75F);
             btnPesquisar.ForeColor = SystemColors.ButtonHighlight;
             btnPesquisar.ImeMode = ImeMode.NoControl;
-            btnPesquisar.Location = new Point(566, 101);
+            btnPesquisar.Location = new Point(660, 101);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Padding = new Padding(0, 0, 0, 4);
             btnPesquisar.RightToLeft = RightToLeft.No;
@@ -123,7 +125,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("SAPGUI-Icons", 14.25F);
-            label4.Location = new Point(198, 83);
+            label4.Location = new Point(473, 82);
             label4.Name = "label4";
             label4.Size = new Size(61, 21);
             label4.TabIndex = 26;
@@ -133,31 +135,49 @@
             // 
             tbNumeroLote.BorderStyle = BorderStyle.FixedSingle;
             tbNumeroLote.Font = new Font("SAPGUI-Icons", 14.25F);
-            tbNumeroLote.Location = new Point(195, 106);
+            tbNumeroLote.Location = new Point(473, 106);
             tbNumeroLote.Name = "tbNumeroLote";
             tbNumeroLote.Size = new Size(152, 30);
             tbNumeroLote.TabIndex = 25;
+            // 
+            // tbCodFornecedor
+            // 
+            tbCodFornecedor.BorderStyle = BorderStyle.FixedSingle;
+            tbCodFornecedor.Font = new Font("SAPGUI-Icons", 14.25F);
+            tbCodFornecedor.Location = new Point(101, 106);
+            tbCodFornecedor.Name = "tbCodFornecedor";
+            tbCodFornecedor.Size = new Size(152, 30);
+            tbCodFornecedor.TabIndex = 29;
+            // 
+            // tbCodMaterial
+            // 
+            tbCodMaterial.BorderStyle = BorderStyle.FixedSingle;
+            tbCodMaterial.Font = new Font("SAPGUI-Icons", 14.25F);
+            tbCodMaterial.Location = new Point(288, 106);
+            tbCodMaterial.Name = "tbCodMaterial";
+            tbCodMaterial.Size = new Size(152, 30);
+            tbCodMaterial.TabIndex = 30;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("SAPGUI-Icons", 14.25F);
+            label1.Location = new Point(288, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(108, 21);
+            label1.TabIndex = 31;
+            label1.Text = "Código Material";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("SAPGUI-Icons", 14.25F);
-            label2.Location = new Point(398, 83);
+            label2.Location = new Point(101, 82);
             label2.Name = "label2";
             label2.Size = new Size(131, 21);
-            label2.TabIndex = 28;
-            label2.Text = "Data Recebimento:";
-            // 
-            // dtPickerDataRecebimento
-            // 
-            dtPickerDataRecebimento.Checked = false;
-            dtPickerDataRecebimento.DropDownAlign = LeftRightAlignment.Right;
-            dtPickerDataRecebimento.Font = new Font("SAPGUI-Icons", 14.25F);
-            dtPickerDataRecebimento.Format = DateTimePickerFormat.Short;
-            dtPickerDataRecebimento.Location = new Point(395, 106);
-            dtPickerDataRecebimento.Name = "dtPickerDataRecebimento";
-            dtPickerDataRecebimento.Size = new Size(131, 30);
-            dtPickerDataRecebimento.TabIndex = 27;
+            label2.TabIndex = 32;
+            label2.Text = "Código Fornecedor";
             // 
             // FormConsultaRecebimento
             // 
@@ -166,7 +186,9 @@
             BackColor = Color.White;
             ClientSize = new Size(925, 575);
             Controls.Add(label2);
-            Controls.Add(dtPickerDataRecebimento);
+            Controls.Add(label1);
+            Controls.Add(tbCodMaterial);
+            Controls.Add(tbCodFornecedor);
             Controls.Add(label4);
             Controls.Add(tbNumeroLote);
             Controls.Add(panel1);
@@ -195,7 +217,9 @@
         private Panel panel1;
         private Label label4;
         private TextBox tbNumeroLote;
+        private TextBox tbCodFornecedor;
+        private TextBox tbCodMaterial;
+        private Label label1;
         private Label label2;
-        private DateTimePicker dtPickerDataRecebimento;
     }
 }
