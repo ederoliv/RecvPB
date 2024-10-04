@@ -44,9 +44,9 @@ namespace RecvPB
                     dgvRecebimento.DataSource = dtRecebimento;
 
                     dgvRecebimento.Columns[0].Visible = false;
-                    dgvRecebimento.Columns[1].HeaderText = "Cód Fonecedor";
-                    dgvRecebimento.Columns[2].HeaderText = "Cód Material";
-                    dgvRecebimento.Columns[3].HeaderText = "Data Recebimento";
+                    dgvRecebimento.Columns[1].HeaderText = "Fonecedor";
+                    dgvRecebimento.Columns[2].HeaderText = "Material";
+                    dgvRecebimento.Columns[3].HeaderText = "Recebimento";
                     dgvRecebimento.Columns[4].HeaderText = "Recebido Por";
                     dgvRecebimento.Columns[5].HeaderText = "Quantidade";
                     dgvRecebimento.Columns[6].HeaderText = "Nro Lote";

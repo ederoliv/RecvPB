@@ -17,6 +17,11 @@ No sistema nós temos que pontuar algumas entidades que são fundamentais para que
 - [x] Fornecedor
 - [x] Recebimento
 
+### Ícone do programa
+   O ícone do programa leva as iniciais das duas empresas e a sua cor foi inspirada nas cores de ambas as empresas.
+
+   ![icone](/Resources/screenshots/recvpb.svg)
+
 ### 1 - Tela inicial/Registro de entrada de produtos
    Na tela inicial o usuário possui acesso ao formulário principal do sistema, onde será feito o registro dos produtos
 que entram no almoxarifado central. Há uma validação para que nenhum dos campos que iniciam vazios(Fornecedor, Material, Quantidade e Número do Lote) 
