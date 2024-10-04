@@ -32,7 +32,7 @@ de recebimento.
 
 
 ### 2 - Tela de consulta de recebimentos
-   A
+
 ![consulta-recebimento](/Resources/screenshots/consulta-recebimento.png)
 
 ### 3 - Tela de cadastro de fonecedores
