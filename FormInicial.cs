@@ -37,6 +37,11 @@ namespace RecvPB
             {
                 RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
 
+
+                FormImprimirRecebimento formImprimirRecebimento = new();
+                formImprimirRecebimento.Show();
+
+
                 LimpaCamposFormInicial();
                 CarregaGridRecebimento();
             }
@@ -73,7 +78,7 @@ namespace RecvPB
             try
             {
 
-                DataTable dtRecebimento = RecebimentoRepository.BuscaUltimosVinteRecebimentos();
+                DataTable dtRecebimento = RecebimentoRepository.BuscaUltimosRecebimentos(20);
 
                 if (dtRecebimento.Rows.Count > 0)
                 {

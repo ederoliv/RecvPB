@@ -34,8 +34,6 @@ namespace RecvPB.Repository
                         // Executa o comando para inserir os dados
                         command.ExecuteNonQuery();
 
-                        // Exibe uma mensagem de sucesso
-                        MessageBox.Show("Recebimento inserido com sucesso!");
                     }
                 }
                 catch (Exception ex)
@@ -85,7 +83,7 @@ namespace RecvPB.Repository
             }
         }
 
-        public static DataTable BuscaUltimosVinteRecebimentos()
+        public static DataTable BuscaUltimosRecebimentos(int qtdRecebimentos)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             using (OleDbConnection connection = new OleDbConnection(databaseConnection.GetConnectionStringDbPrincipal()))
@@ -93,7 +91,7 @@ namespace RecvPB.Repository
                 try
                 {
                     connection.Open();
-                    string query = "SELECT TOP 20 * FROM Recebimento ORDER BY Código DESC;";
+                    string query = $"SELECT TOP {qtdRecebimentos} * FROM Recebimento ORDER BY Código DESC;";
                     OleDbCommand command = new OleDbCommand(query, connection);
                     OleDbDataAdapter adapter = new OleDbDataAdapter(command);
                     DataTable dataTable = new DataTable();
@@ -108,8 +106,6 @@ namespace RecvPB.Repository
                     return new DataTable();
                 }
             }
-
         }
-
     }
 }
