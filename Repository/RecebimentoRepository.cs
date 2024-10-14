@@ -6,7 +6,7 @@ namespace RecvPB.Repository
     internal class RecebimentoRepository
     {
 
-        public static void InserirRecebimento(string fonecedor, string material, string dataRecebimento, string recebedor, string quantidade, string numeroLote)
+        public static bool InserirRecebimento(string fonecedor, string material, string dataRecebimento, string recebedor, string quantidade, string numeroLote)
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -35,11 +35,16 @@ namespace RecvPB.Repository
                         command.ExecuteNonQuery();
 
                     }
+
+                    return true;
+
                 }
                 catch (Exception ex)
                 {
                     // Exibe uma mensagem de erro, se necessário
                     MessageBox.Show("Erro ao inserir recebimento: " + ex.Message);
+
+                    return false;
                 }
             }
         }

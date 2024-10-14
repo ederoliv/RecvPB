@@ -79,11 +79,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(122, 96);
+            label2.Location = new Point(131, 107);
             label2.Name = "label2";
-            label2.Size = new Size(382, 30);
+            label2.Size = new Size(346, 25);
             label2.TabIndex = 4;
             label2.Text = "Deseja fazer a impressão das etiquetas?";
             // 
@@ -99,7 +99,7 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormImprimirRecebimento";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormImprimirRecebimento";
             Load += FormImprimirRecebimento_Load;
             ResumeLayout(false);

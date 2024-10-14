@@ -35,15 +35,18 @@ namespace RecvPB
             }
             else
             {
-                RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
+                var recebimento = RecebimentoRepository.InserirRecebimento(tboxFornecedor.Text, tBoxMaterial.Text, dtPickerDataRecebimento.Value.ToString("dd/MM/yyyy"), comboBoxRecebedores.Text, tBoxQuantidade.Text, tBoxNumeroLote.Text);
+
+                if(recebimento) {
+
+                    FormImprimirRecebimento formImprimirRecebimento = new();
+                    formImprimirRecebimento.Show();
 
 
-                FormImprimirRecebimento formImprimirRecebimento = new();
-                formImprimirRecebimento.Show();
+                    LimpaCamposFormInicial();
+                    CarregaGridRecebimento();
 
-
-                LimpaCamposFormInicial();
-                CarregaGridRecebimento();
+                }
             }
         }
         private void btnConsultarRecebimentos_Click(object sender, EventArgs e)

@@ -38,8 +38,6 @@ namespace RecvPB
                 String lote = row[columnName: "nro_lote"].ToString();
                 String codMat = row[columnName: "cod_mat"].ToString();
 
-                MessageBox.Show($"{lote} and {codMat}");
-
 
                 SalvaEtiqueta(lote, codMat);
                 imprimeEtiqueta();
@@ -63,7 +61,7 @@ namespace RecvPB
             Workbook pastaDeTrabalho;
             Worksheet planilha;
 
-            String Path = @"C:\PROD\MF60.xls";
+            String Path = @"\\domain\sistemas\MF60.xls";
 
             pastaDeTrabalho = app.Workbooks.Open(Path);
 
@@ -71,6 +69,7 @@ namespace RecvPB
 
             planilha.Cells[6, 2] = lote;
             planilha.Cells[3, 2] = codMat;
+            planilha.Cells[7, 2] = DateTime.Now.ToString("dd/MM/yyyy");
 
             pastaDeTrabalho.SaveAs(Path);
             pastaDeTrabalho.Close(false);
@@ -89,7 +88,32 @@ namespace RecvPB
         public void imprimeEtiqueta()
         {
             //imprime aqui
-            
+            try
+            {
+                string file = @"\\domain\sistemas\MF60.xls";
+                var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+                Microsoft.Office.Interop.Excel.Workbooks books = excelApp.Workbooks;
+                Microsoft.Office.Interop.Excel._Workbook sheet = books.Open(file);
+                excelApp.Visible = true; // true will open Excel
+                sheet.PrintPreview();
+                excelApp.Visible = false; // hides excel file when user closes preview
+
+                books.Close();
+                sheet.Close();
+
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(books);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(sheet);
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
