@@ -89,6 +89,7 @@ namespace RecvPB
         public void imprimeEtiqueta()
         {
             //imprime aqui
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
